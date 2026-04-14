@@ -863,7 +863,8 @@ const PROJECTS = [
     id: 1, name: "Instituto ECOTECH", year: "2023", cat: "equipamiento",
     color: "#2D6A4F", icon: "building", wip: false,
     desc: "Complejo educativo-tecnológico de múltiples plantas con programa mixto: aulas, laboratorios y espacios de coworking. El proyecto explora la relación entre estructura y paisaje a través de fachadas verdes y circulaciones abiertas.",
-    location: "República Dominicana", semester: "Semestre 7", program: "Instituto Tecnológico"
+    location: "República Dominicana", semester: "Semestre 7", program: "Instituto Tecnológico",
+    pdf: "ecotech.pdf"
   },
   {
     id: 2, name: "Centro Comunitario Arroyo Pastor", year: "2024", cat: "equipamiento",
@@ -885,7 +886,8 @@ const PROJECTS = [
     id: 4, name: "Hábitat 31", year: "2024", cat: "vivienda",
     color: "#E67E22", icon: "skyline", wip: false,
     desc: "Edificio residencial y comercial de uso mixto con estacionamientos soterrados. Tipología habitacional densa para contexto urbano consolidado, con planta libre en los niveles comerciales y unidades residenciales eficientes.",
-    location: "República Dominicana", semester: "Semestre 10", program: "Vivienda Colectiva · Uso Mixto"
+    location: "República Dominicana", semester: "Semestre 10", program: "Vivienda Colectiva · Uso Mixto",
+    pdf: "habitat31.pdf"
   },
   {
     id: 5, name: "Paraíso Escondido", year: "2025", cat: "vivienda",
@@ -900,28 +902,25 @@ const PROJECTS = [
     id: 6, name: "Proyecto Urbano Jánico", year: "2025", cat: "urbano",
     color: "#2C3E50", icon: "grid", wip: false,
     desc: "Diagnóstico urbano e intervención propositiva en Jánico, ciudad intramontana de la cordillera central dominicana. El análisis contempla variables físico-geográficas, movilidad y uso de suelo como base para una estrategia de planificación prospectiva.",
-    location: "Jánico, RD", semester: "Semestre 11", program: "Planificación Urbana"
+    location: "Jánico, RD", semester: "Semestre 11", program: "Planificación Urbana",
+    pdf: "janico.pdf"
   },
   {
     id: 7, name: "Proyecto Urbano Getafe", year: "2025", cat: "urbano",
     color: "#1A237E", icon: "skyline", wip: false,
     desc: "Proyecto de diseño urbano desarrollado durante el intercambio académico en la Universidad Politécnica de Madrid. La propuesta interviene en el tejido de Getafe con estrategias de densificación, espacio público y movilidad sostenible.",
-    location: "Getafe, Madrid, España", semester: "Intercambio UPM", program: "Diseño Urbano"
+    location: "Getafe, Madrid, España", semester: "Intercambio UPM", program: "Diseño Urbano",
+    pdf: "getafe_compressed.pdf"
   },
   {
     id: 8, name: "Edificio Multifuncional", year: "2024", cat: "equipamiento",
     color: "#8E44AD", icon: "building", wip: false,
     desc: "Edificio de programa mixto que combina usos comerciales, de servicios y habitacionales. Proyecto que explora la articulación de múltiples funciones en una única estructura, con fachada activa hacia el espacio público. Proyecto 2 / Hotel Boutique.",
-    location: "República Dominicana", semester: "Semestre 6", program: "Uso Mixto · Hotel Boutique"
-  },
-  {
-    id: 9, name: "Casa Bianchi", year: "2026", cat: "vivienda",
-    color: "#607D8B", icon: "analysis", wip: true,
-    desc: "Modelado, análisis y documentación de la Casa Bianchi. Proyecto en curso de levantamiento arquitectónico y análisis espacial.",
-    location: "Por definir", semester: "En desarrollo", program: "Modelado · Análisis Arquitectónico"
+    location: "República Dominicana", semester: "Semestre 6", program: "Uso Mixto · Hotel Boutique",
+    pdf: "edificio_multifuncional.pdf"
   },
 ];
-
+ 
 let activeFilter = 'all';
 
 function renderProjects(filter) {
