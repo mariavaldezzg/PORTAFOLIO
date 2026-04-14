@@ -7,7 +7,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
     --black: #0a0a0a;
     --white: #fafafa;
@@ -17,16 +16,13 @@
     --gray-700: #444;
     --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-
   html { scroll-behavior: smooth; cursor: none; }
-
   body {
     font-family: 'Inter', sans-serif;
     background: var(--white);
     color: var(--black);
     overflow-x: hidden;
   }
-
   /* CURSOR */
   .cursor {
     width: 8px; height: 8px;
@@ -44,7 +40,6 @@
     background: transparent;
     border: 1.5px solid var(--black);
   }
-
   /* PROGRESS BAR */
   .progress-bar {
     position: fixed;
@@ -55,7 +50,6 @@
     z-index: 9998;
     transition: width 0.1s linear;
   }
-
   /* NAV */
   nav {
     position: fixed;
@@ -71,7 +65,6 @@
     transition: border-color 0.3s ease;
   }
   nav.scrolled { border-bottom-color: var(--gray-300); }
-
   .nav-logo {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 600;
@@ -81,7 +74,6 @@
     color: var(--black);
     text-decoration: none;
   }
-
   .nav-links {
     display: flex;
     gap: 36px;
@@ -97,10 +89,8 @@
     transition: color var(--transition);
   }
   .nav-links a:hover { color: var(--black); }
-
   .hamburger { display: none; flex-direction: column; gap: 5px; cursor: none; }
   .hamburger span { width: 22px; height: 1.5px; background: var(--black); transition: var(--transition); }
-
   /* HERO */
   .hero {
     min-height: 100vh;
@@ -111,8 +101,6 @@
     position: relative;
     overflow: hidden;
   }
-
-  /* "portafolio" — etiqueta muy pequeña arriba */
   .hero-label {
     font-size: 10px;
     font-weight: 400;
@@ -123,8 +111,6 @@
     opacity: 0;
     animation: fadeUp 1s 0.2s forwards;
   }
-
-  /* "PORTAFOLIO" — título predominante grande */
   .hero-title {
     font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(64px, 13vw, 180px);
@@ -136,8 +122,6 @@
     animation: fadeUp 1s 0.35s forwards;
     margin-bottom: 28px;
   }
-
-  /* nombre — segunda fuente predominante */
   .hero-name {
     font-family: 'Inter', sans-serif;
     font-size: clamp(18px, 2.8vw, 36px);
@@ -149,7 +133,6 @@
     animation: fadeUp 1s 0.55s forwards;
     margin-bottom: 16px;
   }
-
   .hero-sub {
     font-size: 12px;
     font-weight: 400;
@@ -159,7 +142,6 @@
     opacity: 0;
     animation: fadeUp 1s 0.75s forwards;
   }
-
   .hero-year {
     position: absolute;
     bottom: 80px;
@@ -171,7 +153,6 @@
     opacity: 0;
     animation: fadeIn 1s 1.1s forwards;
   }
-
   .hero-line {
     position: absolute;
     bottom: 0;
@@ -182,7 +163,6 @@
     opacity: 0;
     animation: fadeIn 1s 0.9s forwards;
   }
-
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
@@ -191,7 +171,6 @@
     from { opacity: 0; }
     to { opacity: 1; }
   }
-
   /* SECTION HEADER */
   .section-header {
     padding: 80px 48px 48px;
@@ -216,10 +195,8 @@
     letter-spacing: -0.02em;
     color: var(--black);
   }
-
   /* PROJECTS GRID */
   #proyectos { padding-bottom: 80px; }
-
   .filter-bar {
     padding: 0 48px 32px;
     display: flex;
@@ -243,7 +220,6 @@
     color: var(--white);
     border-color: var(--black);
   }
-
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -251,7 +227,6 @@
     background: var(--gray-300);
     margin: 0;
   }
-
   .project-card {
     background: var(--white);
     cursor: none;
@@ -260,11 +235,7 @@
     transition: var(--transition);
   }
   .project-card:hover { z-index: 2; }
-
-  /* WIP card */
-  .project-card.wip {
-    opacity: 0.6;
-  }
+  .project-card.wip { opacity: 0.6; }
   .wip-badge {
     position: absolute;
     top: 16px;
@@ -278,7 +249,6 @@
     color: var(--white);
     z-index: 2;
   }
-
   .project-thumb {
     aspect-ratio: 4/3;
     position: relative;
@@ -287,7 +257,6 @@
     align-items: center;
     justify-content: center;
   }
-
   .project-thumb-img {
     position: absolute;
     inset: 0;
@@ -302,14 +271,12 @@
     transform: scale(1.04);
     filter: grayscale(0%);
   }
-
   .project-thumb-bg {
     position: absolute;
     inset: 0;
     background: var(--gray-100);
     transition: var(--transition);
   }
-
   .project-thumb-color {
     position: absolute;
     inset: 0;
@@ -317,7 +284,6 @@
     transition: opacity var(--transition);
   }
   .project-card:hover .project-thumb-color { opacity: 0.1; }
-
   .project-thumb svg {
     width: 48px;
     height: 48px;
@@ -330,7 +296,6 @@
     opacity: 0.6;
     transform: scale(1.05);
   }
-
   .project-number {
     position: absolute;
     top: 16px;
@@ -344,14 +309,12 @@
     transition: color var(--transition);
   }
   .project-card:hover .project-number { color: var(--gray-500); }
-
   .project-info {
     padding: 20px 24px 24px;
     border-top: 1px solid var(--gray-300);
     transition: border-color var(--transition);
   }
   .project-card:hover .project-info { border-top-color: transparent; }
-
   .project-category {
     font-size: 10px;
     font-weight: 500;
@@ -361,7 +324,6 @@
     margin-bottom: 6px;
     transition: color var(--transition);
   }
-
   .project-name {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 16px;
@@ -372,13 +334,11 @@
     line-height: 1.3;
     transition: color var(--transition);
   }
-
   .project-year {
     font-size: 12px;
     color: var(--gray-500);
     font-weight: 300;
   }
-
   .project-arrow {
     position: absolute;
     bottom: 24px;
@@ -399,7 +359,6 @@
     transform: translateX(0);
   }
   .project-arrow svg { width: 12px; }
-
   /* ABOUT */
   #sobre-mi {
     background: var(--black);
@@ -410,10 +369,8 @@
     gap: 80px;
     align-items: start;
   }
-
   .about-left .section-label { color: #555; margin-bottom: 32px; }
   .about-left .section-title { color: var(--white); font-size: clamp(32px, 4vw, 52px); }
-
   .about-right { padding-top: 8px; }
   .about-right p {
     font-size: 15px;
@@ -423,7 +380,6 @@
     margin-bottom: 20px;
   }
   .about-right p strong { color: var(--white); font-weight: 500; }
-
   .about-tags {
     display: flex;
     flex-wrap: wrap;
@@ -439,7 +395,6 @@
     border: 1px solid #333;
     color: #666;
   }
-
   /* FOOTER */
   footer {
     padding: 60px 48px;
@@ -473,7 +428,6 @@
     color: var(--gray-500);
     letter-spacing: 0.05em;
   }
-
   /* MODAL */
   .modal-overlay {
     position: fixed;
@@ -489,7 +443,6 @@
     display: flex;
     background: rgba(10,10,10,0.85);
   }
-
   .modal {
     background: var(--white);
     width: 90%;
@@ -505,7 +458,6 @@
     transform: translateY(0);
     opacity: 1;
   }
-
   .modal-hero {
     aspect-ratio: 16/7;
     display: flex;
@@ -516,7 +468,6 @@
   }
   .modal-hero-bg { position: absolute; inset: 0; }
   .modal-hero svg { width: 64px; opacity: 0.3; position: relative; z-index: 1; filter: brightness(10); }
-
   .modal-hero-img {
     position: absolute;
     inset: 0;
@@ -525,7 +476,6 @@
     object-fit: cover;
     z-index: 1;
   }
-
   .modal-pdf-viewer {
     width: 100%;
     margin-top: 32px;
@@ -562,10 +512,7 @@
     transition: color var(--transition), border-color var(--transition);
   }
   .modal-pdf-download:hover { color: var(--black); border-color: var(--black); }
-
-  .modal-gallery {
-    margin-top: 40px;
-  }
+  .modal-gallery { margin-top: 40px; }
   .modal-gallery-label {
     font-size: 10px;
     letter-spacing: 0.15em;
@@ -588,7 +535,6 @@
     transition: opacity var(--transition);
   }
   .modal-gallery-grid img:hover { opacity: 0.85; }
-
   /* Lightbox */
   .lightbox {
     display: none;
@@ -613,9 +559,7 @@
     cursor: pointer;
     padding: 8px;
   }
-
   .modal-body { padding: 40px 48px 48px; }
-
   .modal-cat {
     font-size: 10px;
     font-weight: 500;
@@ -668,7 +612,6 @@
     font-size: 14px;
     font-weight: 600;
   }
-
   .modal-close {
     position: absolute;
     top: 20px; right: 20px;
@@ -682,7 +625,6 @@
     z-index: 10;
   }
   .modal-close svg { width: 14px; }
-
   /* MOBILE MENU */
   .mobile-menu {
     position: fixed;
@@ -707,7 +649,6 @@
     text-decoration: none;
     letter-spacing: -0.01em;
   }
-
   /* RESPONSIVE */
   @media (max-width: 1024px) {
     .projects-grid { grid-template-columns: repeat(2, 1fr); }
@@ -732,10 +673,8 @@
 </style>
 </head>
 <body>
-
 <div class="cursor" id="cursor"></div>
 <div class="progress-bar" id="progressBar"></div>
-
 <nav id="navbar">
   <a href="#" class="nav-logo">MFV</a>
   <ul class="nav-links">
@@ -747,13 +686,11 @@
     <span></span><span></span>
   </div>
 </nav>
-
 <div class="mobile-menu" id="mobileMenu">
   <a href="#proyectos" onclick="toggleMenu()">Proyectos</a>
   <a href="#sobre-mi" onclick="toggleMenu()">Sobre mí</a>
   <a href="#contacto" onclick="toggleMenu()">Contacto</a>
 </div>
-
 <!-- HERO -->
 <section class="hero">
   <p class="hero-label">portafolio</p>
@@ -763,24 +700,20 @@
   <span class="hero-year">2026</span>
   <div class="hero-line"></div>
 </section>
-
 <!-- PROJECTS -->
 <section id="proyectos">
   <div class="section-header">
     <span class="section-label">01</span>
     <h2 class="section-title">Proyectos</h2>
   </div>
-
   <div class="filter-bar">
     <button class="filter-btn active" onclick="filterProjects('all', this)">Todos</button>
     <button class="filter-btn" onclick="filterProjects('vivienda', this)">Vivienda</button>
     <button class="filter-btn" onclick="filterProjects('equipamiento', this)">Equipamiento</button>
     <button class="filter-btn" onclick="filterProjects('urbano', this)">Urbano</button>
   </div>
-
   <div class="projects-grid" id="projectsGrid"></div>
 </section>
-
 <!-- ABOUT -->
 <section id="sobre-mi">
   <div class="about-left">
@@ -802,7 +735,6 @@
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer id="contacto">
   <div class="footer-logo">Maria Fernanda Valdez</div>
@@ -813,8 +745,6 @@
   </div>
   <span class="footer-copy">© 2026</span>
 </footer>
-
-<!-- MODAL -->
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">
@@ -824,7 +754,6 @@
   </button>
   <img id="lightboxImg" src="" alt="">
 </div>
-
 <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
   <div class="modal" id="modal">
     <button class="modal-close" onclick="closeModal()">
@@ -846,7 +775,6 @@
     </div>
   </div>
 </div>
-
 <script>
 const ICONS = {
   building: `<rect x="8" y="4" width="32" height="40" rx="1"/><line x1="16" y1="14" x2="20" y2="14"/><line x1="28" y1="14" x2="32" y2="14"/><line x1="16" y1="22" x2="20" y2="22"/><line x1="28" y1="22" x2="32" y2="22"/><line x1="16" y1="30" x2="20" y2="30"/><line x1="28" y1="30" x2="32" y2="30"/><rect x="20" y="34" width="8" height="10"/>`,
@@ -856,69 +784,74 @@ const ICONS = {
   hexagon: `<path d="M24 4 L42 14 L42 34 L24 44 L6 34 L6 14 Z"/><path d="M24 12 L36 19 L36 29 L24 36 L12 29 L12 19 Z"/>`,
   skyline: `<rect x="4" y="28" width="8" height="16"/><rect x="14" y="18" width="8" height="26"/><rect x="24" y="10" width="10" height="34"/><rect x="36" y="22" width="8" height="22"/><line x1="2" y1="44" x2="46" y2="44"/>`,
   analysis: `<circle cx="24" cy="24" r="18"/><line x1="24" y1="6" x2="24" y2="42"/><line x1="6" y1="24" x2="42" y2="24"/><path d="M10 14 Q24 28 38 14"/><path d="M10 34 Q24 20 38 34"/>`,
+  dorm: `<rect x="6" y="8" width="36" height="36" rx="1"/><rect x="12" y="16" width="8" height="8"/><rect x="28" y="16" width="8" height="8"/><rect x="12" y="28" width="8" height="8"/><rect x="28" y="28" width="8" height="8"/><line x1="24" y1="8" x2="24" y2="44"/><line x1="6" y1="26" x2="42" y2="26"/>`,
 };
 
 const PROJECTS = [
   {
-    id: 1, name: "Instituto ECOTECH", year: "2023", cat: "equipamiento",
-    color: "#2D6A4F", icon: "building", wip: false,
-    desc: "Complejo educativo-tecnológico de múltiples plantas con programa mixto: aulas, laboratorios y espacios de coworking. El proyecto explora la relación entre estructura y paisaje a través de fachadas verdes y circulaciones abiertas.",
-    location: "República Dominicana", semester: "Semestre 7", program: "Instituto Tecnológico"
+    id: 1, name: "Estancia Estudiantil", year: "2023", cat: "vivienda",
+    color: "#5C6B4A", icon: "dorm", wip: false,
+    desc: "Centro habitacional para estudiantes foráneos desarrollado como proyecto académico de primer año. El programa contempla pabellones habitacionales diferenciados, área administrativa, zona social y estacionamiento. El diseño organiza tres edificaciones en torno a un jardín central que actúa como espacio articulador, con orientación norte para maximizar ventilación e iluminación natural. Las formas responden a la topografía con plantas fraccionadas y techos inclinados que favorecen la circulación del aire.",
+    location: "Santiago, República Dominicana", semester: "Proyecto Arquitectónico I — PUCMM", program: "Residencia Estudiantil · Vivienda Colectiva",
+    coverImg: "Estancia Estudiantil PORTADA .png",
+    pdf: "ESTANCIA ESTUDIANTIL proyecto I.pdf"
   },
   {
-    id: 2, name: "Centro Comunitario Arroyo Pastor", year: "2024", cat: "equipamiento",
+    id: 2, name: "Instituto ECOTECH", year: "2023", cat: "equipamiento",
+    color: "#2D6A4F", icon: "building", wip: false,
+    desc: "Complejo educativo-tecnológico de múltiples plantas con programa mixto: aulas, laboratorios y espacios de coworking. El proyecto explora la relación entre estructura y paisaje a través de fachadas verdes y circulaciones abiertas.",
+    location: "República Dominicana", semester: "Proyecto Arquitectónico III — PUCMM", program: "Instituto Tecnológico",
+    coverImg: "P3 PORTADA.jpg",
+    pdf: "ECOTECH  proyecto III.pdf"
+  },
+  {
+    id: 3, name: "Centro Comunitario Arroyo Pastor", year: "2024", cat: "equipamiento",
     color: "#2C5F3A", icon: "arch", wip: false,
     desc: "Centro comunitario desarrollado bajo el concepto 'Caórdico': caótico en apariencia pero intuitivo, con patrones no convencionales que emergen del sitio. La cañada que perfila el borde del terreno genera una irregularidad única que el proyecto convierte en principio organizador. El programa incluye multiuso, talleres, biblioteca y administración, cada edificio diseñado con plantas y secciones propias adaptadas al terreno.",
     location: "República Dominicana", semester: "Proyecto IV — PUCMM", program: "Centro Comunitario · Equipamiento",
-    coverImg: "arroyo_pastor_cover.jpg",
+    coverImg: "CENTRO COMUNITARIO PORTADA.jpg",
     pdf: "https://1drv.ms/b/c/fd7a0ef0232bdee9/IQSjpqJkq3gIS4PyfKwDi_pEAQCRSKnMQN9Sz1zD0L8y__4"
   },
   {
-    id: 3, name: "Centro Marítimo de Investigación", year: "2024", cat: "equipamiento",
+    id: 4, name: "Centro Marítimo de Investigación", year: "2024", cat: "equipamiento",
     color: "#1a3a4a", icon: "building", wip: false,
     desc: "Centro de investigación marina ubicado en Playa Los Cocos, Montecristi, República Dominicana. Desarrollado para el 13.º Concurso #DesafíoALACERO en equipo con Abraham Núñez, Iraílí de León y Jorge Guillén. La propuesta plantea una estructura de acero que toca solo el 9% del terreno, elevándose en voladizo sobre el promontorio rocoso. El diseño toma como referencia morfológica el mangle, cuya red de raíces genera estabilidad en terrenos difíciles. El programa incluye laboratorios, residencia científica, zona comunitaria y administración, con sistemas de ventilación pasiva, techos recolectores de agua y paneles fotovoltaicos integrados.",
     location: "Playa Los Cocos, Montecristi, RD", semester: "Concurso ADOACERO / ALACERO", program: "Centro de Investigación · Acero",
-    coverImg: "adoacero_cover.jpg",
+    coverImg: "ADOACERO PORTADA.jpg",
     pdf: "https://1drv.ms/b/c/fd7a0ef0232bdee9/IQS3JDkJW_32TLGEuwyYu3uAAblwnCmGjoJIwgMbChJRg70"
   },
   {
-    id: 4, name: "Hábitat 31", year: "2024", cat: "vivienda",
+    id: 5, name: "Hábitat 31", year: "2024", cat: "vivienda",
     color: "#E67E22", icon: "skyline", wip: false,
     desc: "Edificio residencial y comercial de uso mixto con estacionamientos soterrados. Tipología habitacional densa para contexto urbano consolidado, con planta libre en los niveles comerciales y unidades residenciales eficientes.",
-    location: "República Dominicana", semester: "Semestre 10", program: "Vivienda Colectiva · Uso Mixto"
+    location: "República Dominicana", semester: "Semestre 10", program: "Vivienda Colectiva · Uso Mixto",
+    coverImg: "HABITAT 31 PORTADA 2.jpg",
+    pdf: "Habitat 31.pdf"
   },
   {
-    id: 5, name: "Paraíso Escondido", year: "2025", cat: "vivienda",
+    id: 6, name: "Paraíso Escondido", year: "2025", cat: "vivienda",
     color: "#196F3D", icon: "hexagon", wip: false,
     desc: "Casa club para la propietaria Milci Contreras de Cruz, ubicada en Calle Federico Basilis, Jarabacoa. Diseño arquitectónico individual desarrollado para la firma Hexágono Arquitectura, bajo su supervisión. El conjunto incluye plantas arquitectónicas, dimensionadas y de techo, secciones, elevaciones y tabla de puertas y ventanas. La propuesta responde al contexto montañoso de Jarabacoa con una arquitectura residencial de escala íntima.",
     location: "Jarabacoa, RD", semester: "Proyecto Profesional", program: "Vivienda · Casa Club",
-    coverImg: "paraiso_escondido_cover.jpg",
-    pdf: "paraiso_escondido_paneles.pdf",
-    gallery: ["paraiso_render_1.jpeg","paraiso_render_2.jpeg","paraiso_render_3.jpeg","paraiso_render_4.jpeg","paraiso_render_5.jpeg","paraiso_render_6.jpeg"]
+    coverImg: "PARAISO ESCONDIDO PORTADA.jpg",
+    pdf: "PARAISO ESCONDIDO CASA CLUB.pdf",
+    gallery: ["Renders paraiso escondido/paraiso_render_1.jpeg","Renders paraiso escondido/paraiso_render_2.jpeg","Renders paraiso escondido/paraiso_render_3.jpeg","Renders paraiso escondido/paraiso_render_4.jpeg","Renders paraiso escondido/paraiso_render_5.jpeg","Renders paraiso escondido/paraiso_render_6.jpeg"]
   },
   {
-    id: 6, name: "Proyecto Urbano Jánico", year: "2025", cat: "urbano",
+    id: 7, name: "Proyecto Urbano Jánico", year: "2025", cat: "urbano",
     color: "#2C3E50", icon: "grid", wip: false,
     desc: "Diagnóstico urbano e intervención propositiva en Jánico, ciudad intramontana de la cordillera central dominicana. El análisis contempla variables físico-geográficas, movilidad y uso de suelo como base para una estrategia de planificación prospectiva.",
-    location: "Jánico, RD", semester: "Semestre 11", program: "Planificación Urbana"
+    location: "Jánico, RD", semester: "Semestre 11", program: "Planificación Urbana",
+    coverImg: "JANICO PORTADA.jpg",
+    pdf: "JANICO proyecto urbano.pdf"
   },
   {
-    id: 7, name: "Proyecto Urbano Getafe", year: "2025", cat: "urbano",
+    id: 8, name: "Proyecto Urbano Getafe", year: "2025", cat: "urbano",
     color: "#1A237E", icon: "skyline", wip: false,
     desc: "Proyecto de diseño urbano desarrollado durante el intercambio académico en la Universidad Politécnica de Madrid. La propuesta interviene en el tejido de Getafe con estrategias de densificación, espacio público y movilidad sostenible.",
-    location: "Getafe, Madrid, España", semester: "Intercambio UPM", program: "Diseño Urbano"
-  },
-  {
-    id: 8, name: "Edificio Multifuncional", year: "2024", cat: "equipamiento",
-    color: "#8E44AD", icon: "building", wip: false,
-    desc: "Edificio de programa mixto que combina usos comerciales, de servicios y habitacionales. Proyecto que explora la articulación de múltiples funciones en una única estructura, con fachada activa hacia el espacio público. Proyecto 2 / Hotel Boutique.",
-    location: "República Dominicana", semester: "Semestre 6", program: "Uso Mixto · Hotel Boutique"
-  },
-  {
-    id: 9, name: "Casa Bianchi", year: "2026", cat: "vivienda",
-    color: "#607D8B", icon: "analysis", wip: true,
-    desc: "Modelado, análisis y documentación de la Casa Bianchi. Proyecto en curso de levantamiento arquitectónico y análisis espacial.",
-    location: "Por definir", semester: "En desarrollo", program: "Modelado · Análisis Arquitectónico"
+    location: "Getafe, Madrid, España", semester: "Intercambio UPM", program: "Diseño Urbano",
+    coverImg: "portada Getafe.png",
+    pdf: "Getafe proyecto urbano.pdf"
   },
 ];
 
@@ -928,7 +861,7 @@ function renderProjects(filter) {
   const grid = document.getElementById('projectsGrid');
   const filtered = filter === 'all' ? PROJECTS : PROJECTS.filter(p => p.cat === filter);
   grid.innerHTML = filtered.map((p, i) => `
-    <div class="project-card${p.wip ? ' wip' : ''}" onclick="${p.wip ? 'openModal(' + p.id + ')' : 'openModal(' + p.id + ')'}" data-cat="${p.cat}">
+    <div class="project-card${p.wip ? ' wip' : ''}" onclick="openModal(${p.id})" data-cat="${p.cat}">
       ${p.wip ? '<span class="wip-badge">En proceso</span>' : ''}
       <div class="project-thumb">
         <div class="project-thumb-bg"></div>
@@ -962,8 +895,6 @@ function filterProjects(cat, btn) {
 
 function openModal(id) {
   const p = PROJECTS.find(x => x.id === id);
-
-  // Hero: imagen real o color con ícono
   document.getElementById('modalHeroBg').style.background = p.coverImg ? 'transparent' : p.color;
   document.getElementById('modalHeroIcon').innerHTML = p.coverImg ? '' : ICONS[p.icon];
   const existingHeroImg = document.getElementById('modalHeroImg');
@@ -976,7 +907,6 @@ function openModal(id) {
     img.alt = p.name;
     document.getElementById('modalHero').appendChild(img);
   }
-
   document.getElementById('modalCat').textContent = p.cat;
   document.getElementById('modalTitle').textContent = p.name;
   document.getElementById('modalAccent').style.background = p.color;
@@ -990,8 +920,6 @@ function openModal(id) {
     <div class="modal-meta-item"><p class="modal-meta-label">Semestre</p><p class="modal-meta-value">${p.semester}</p></div>
     <div class="modal-meta-item"><p class="modal-meta-label">Programa</p><p class="modal-meta-value">${p.program}</p></div>
   `;
-
-  // PDF viewer
   const existingPdf = document.getElementById('modalPdfSection');
   if (existingPdf) existingPdf.remove();
   if (p.pdf) {
@@ -1001,8 +929,6 @@ function openModal(id) {
     pdfSection.innerHTML = `<iframe src="${p.pdf}" title="Paneles del proyecto ${p.name}"></iframe>`;
     document.getElementById('modalMeta').after(pdfSection);
   }
-
-  // Galería de renders
   const existingGallery = document.getElementById('modalGallerySection');
   if (existingGallery) existingGallery.remove();
   if (p.gallery && p.gallery.length) {
@@ -1018,7 +944,6 @@ function openModal(id) {
     if (pdfSection) pdfSection.after(gallerySection);
     else document.getElementById('modalMeta').after(gallerySection);
   }
-
   const overlay = document.getElementById('modalOverlay');
   overlay.style.display = 'flex';
   setTimeout(() => overlay.classList.add('open'), 10);
@@ -1049,7 +974,6 @@ function closeLightbox() {
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-// Cursor
 const cursor = document.getElementById('cursor');
 document.addEventListener('mousemove', e => {
   cursor.style.left = e.clientX + 'px';
@@ -1060,7 +984,6 @@ document.querySelectorAll('a, button, .project-card, .filter-btn').forEach(el =>
   el.addEventListener('mouseleave', () => cursor.classList.remove('expanded'));
 });
 
-// Scroll
 window.addEventListener('scroll', () => {
   const scrollTop = document.documentElement.scrollTop;
   const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
